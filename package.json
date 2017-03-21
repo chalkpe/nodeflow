@@ -2,13 +2,25 @@
   "name": "nodeflow",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "README.md",
+  "dependencies": {
+    "gaussian": "^1.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gaussian": "^1.1.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://ChalkPE@github.com/ChalkPE/nodeflow.git"
+  },
+  "keywords": [
+    "ml"
+  ],
+  "author": "ChalkPE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChalkPE/nodeflow/issues"
+  },
+  "homepage": "https://github.com/ChalkPE/nodeflow#readme"
 }
