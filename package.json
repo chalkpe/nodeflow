@@ -1,0 +1,26 @@
+{
+  "name": "nodeflow",
+  "version": "1.0.0",
+  "description": "TensorFlow practice",
+  "main": "index.html",
+  "dependencies": {
+    "gaussian": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ChalkPE@github.com/ChalkPE/nodeflow.git"
+  },
+  "keywords": [
+    "tensorflow"
+  ],
+  "author": "ChalkPE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChalkPE/nodeflow/issues"
+  },
+  "homepage": "https://github.com/ChalkPE/nodeflow#readme"
+}
