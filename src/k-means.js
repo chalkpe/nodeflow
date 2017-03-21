@@ -3,8 +3,8 @@ const button = document.getElementById('button');
 
 const ctx = graph.getContext('2d');
 const colors = [
-    '#ec407a', '#00bcd4', '#ffc107', '#66bb6a',
-    '#9c27b0', '#cddc39', '#795548'
+    '#ec407a', '#00bcd4', '#ff9800', '#66bb6a', '#9c27b0',
+    '#cddc39', '#795548', '#3f51b5', '#ffeb3b', '#009688'
 ];
 
 function draw(list, color = '#000000', size = 2){
@@ -30,12 +30,12 @@ function pick(array, count) {
 }
 
 const [a, b, c] = [gaussian(0, 0.9), gaussian(3, 0.5), gaussian(1, 0.5)];
-const vectors = [...Array(3000)].map(() => rand(2) ?
+const vectors = [...Array(20000)].map(() => rand(2) ?
     [a.ppf(Math.random()), a.ppf(Math.random())] :
     [b.ppf(Math.random()), c.ppf(Math.random())]);
 
 let total = 0;
-let centroides = pick(vectors, 2 + rand(6));
+let centroides = pick(vectors, 3 + rand(8));
 
 function run(){
     let sum = [];
@@ -54,14 +54,11 @@ function run(){
 
     centroides = sum.map(({ count, x, y }) => [x / count, y / count]);
 
-    console.log('sum', sum);
-    console.log('cen', centroides);
-    console.log('vec', vectors);
-
-    draw(centroides, '#808080', 5);
     draw(vectors);
+    draw(centroides, '#000000', 2);
 
     button.innerHTML = `#${++total}`;
+    setTimeout(run, 0);
 }
 
 draw(vectors, 0, 1);
