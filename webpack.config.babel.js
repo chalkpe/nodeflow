@@ -1,10 +1,12 @@
 import path from 'path';
 
 export default {
-    entry: './app/index.js',
+    entry: {
+        'k-means': './src/k-means/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: 'dist/', filename: 'bundle.js'
+        publicPath: 'dist/', filename: '[name].bundle.js'
     },
     module: {
         rules: [
